@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingTop="@dimen/user_dictionary_padding_top"
+    android:paddingBottom="@dimen/user_dictionary_padding_bottom"
+    android:paddingLeft="@dimen/user_dictionary_padding_left"
+    android:paddingRight="@dimen/user_dictionary_padding_right"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/word_text_view"
+        android:textSize="@dimen/user_dictionary_text_size_word"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="@dimen/user_dictionary_space_between_word_and_edge_details"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/user_dictionary_edge_details_width"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/frequency_text_view"
+            android:textSize="@dimen/user_dictionary_text_size_frequency"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/locale_text_view"
+            android:textSize="@dimen/user_dictionary_text_size_locale"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
