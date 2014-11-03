@@ -12,7 +12,8 @@
         android:id="@+id/word_text_view"
         android:textSize="@dimen/user_dictionary_text_size_word"
         android:layout_gravity="center_vertical"
-        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content" />
 
     <View
@@ -27,14 +28,14 @@
         <TextView
             android:id="@+id/frequency_text_view"
             android:textSize="@dimen/user_dictionary_text_size_frequency"
-            android:gravity="center"
+            android:gravity="right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/locale_text_view"
             android:textSize="@dimen/user_dictionary_text_size_locale"
-            android:gravity="center"
+            android:gravity="right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

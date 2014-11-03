@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by Leonid on 28.10.2014.
+ * Created by Leonid Semyonov (clean-coder-xyz) on 03.11.2014.
  */
 public class TableRow implements Serializable {
     private final int numberOfColumns;

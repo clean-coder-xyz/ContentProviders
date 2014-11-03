@@ -1,14 +1,14 @@
-package com.cleancoder.base.common.ui;
+package com.cleancoder.base.android.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.cleancoder.base.common.R;
+import com.cleancoder.base.R;
 
 /**
- * Created by Leonid on 17.07.2014.
+ * Created by Leonid Semyonov (clean-coder-xyz) on 03.11.2014.
  */
 public abstract class TaskFragment extends android.support.v4.app.Fragment {
 

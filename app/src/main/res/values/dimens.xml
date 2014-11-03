@@ -4,12 +4,12 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="exception_display_description_text_size">20sp</dimen>
     <dimen name="user_dictionary_edge_details_width">96dp</dimen>
-    <dimen name="user_dictionary_text_size_frequency">18sp</dimen>
-    <dimen name="user_dictionary_text_size_word">24sp</dimen>
-    <dimen name="user_dictionary_padding_top">6dp</dimen>
-    <dimen name="user_dictionary_padding_bottom">4dp</dimen>
-    <dimen name="user_dictionary_padding_left">6dp</dimen>
-    <dimen name="user_dictionary_padding_right">6dp</dimen>
+    <dimen name="user_dictionary_text_size_frequency">22sp</dimen>
+    <dimen name="user_dictionary_text_size_locale">20sp</dimen>
+    <dimen name="user_dictionary_text_size_word">36sp</dimen>
+    <dimen name="user_dictionary_padding_top">12dp</dimen>
+    <dimen name="user_dictionary_padding_bottom">11dp</dimen>
+    <dimen name="user_dictionary_padding_left">16dp</dimen>
+    <dimen name="user_dictionary_padding_right">16dp</dimen>
     <dimen name="user_dictionary_space_between_word_and_edge_details">8dp</dimen>
-    <dimen name="user_dictionary_text_size_locale">15sp</dimen>
 </resources>

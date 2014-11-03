@@ -1,12 +1,12 @@
-package com.cleancoder.base.common.ui;
+package com.cleancoder.base.android.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 /**
- * Created by Leonid on 28.10.2014.
+ * Created by Leonid Semyonov (clean-coder-xyz) on 03.11.2014.
  */
-public class UtilityActivity extends ActionBarActivity {
+public class ActivityHelper extends ActionBarActivity {
 
     private final Object LOCK_DESTROYED = new Object();
 
@@ -41,6 +41,5 @@ public class UtilityActivity extends ActionBarActivity {
             return destroyed;
         }
     }
-
 
 }

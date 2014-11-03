@@ -4,15 +4,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cleancoder.base.android.ui.ActivityHelper;
 import com.cleancoder.base.common.data.TableRow;
-import com.cleancoder.base.common.ui.UtilityActivity;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-public class MainActivity extends UtilityActivity implements UserDictionaryLoaderFragment.Callbacks {
+public class MainActivityHelper extends ActivityHelper implements UserDictionaryLoaderFragment.Callbacks {
 
     private static final MenuItemState DEFAULT_MENU_ITEM_STATE = MenuItemState.ENABLED;
 
