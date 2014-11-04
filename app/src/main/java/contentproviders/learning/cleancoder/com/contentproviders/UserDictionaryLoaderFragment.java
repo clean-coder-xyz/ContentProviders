@@ -1,8 +1,10 @@
 package contentproviders.learning.cleancoder.com.contentproviders;
 
 import android.database.Cursor;
+import android.os.Bundle;
 import android.provider.UserDictionary.Words;
 
+import com.cleancoder.base.android.data.Query;
 import com.cleancoder.base.android.ui.ActivityHelper;
 import com.cleancoder.base.android.ui.TaskFragment;
 import com.cleancoder.base.android.util.TaggedLogger;
@@ -16,15 +18,21 @@ import java.util.List;
  */
 public class UserDictionaryLoaderFragment extends TaskFragment {
 
-    private static final TaggedLogger logger = TaggedLogger.forInstance(UserDictionaryLoaderFragment.class);
-
     public static interface Callbacks {
         void onUserDictionaryLoaded(List<TableRow> userDictionary);
         void onCannotGetUserDictionary(Throwable exception);
     }
 
-    public static UserDictionaryLoaderFragment newInstance() {
-        return new UserDictionaryLoaderFragment();
+    private static final TaggedLogger logger = TaggedLogger.forInstance(UserDictionaryLoaderFragment.class);
+
+    private static final String KEY_QUERY = "query";
+
+    public static UserDictionaryLoaderFragment newInstance(Query query) {
+        UserDictionaryLoaderFragment fragment = new UserDictionaryLoaderFragment();
+        Bundle args = new Bundle();
+        args.putParcelable(KEY_QUERY, query);
+        fragment.setArguments(args);
+        return fragment;
     }
 
     @Override
@@ -52,13 +60,8 @@ public class UserDictionaryLoaderFragment extends TaskFragment {
     }
 
     private List<TableRow> getUserDictionary() {
-        String[] projection = { Words.WORD, Words.LOCALE, Words.FREQUENCY };
-        Cursor cursor = getActivity().getContentResolver().query(
-                Words.CONTENT_URI,
-                projection,
-                null,
-                null,
-                Words.FREQUENCY);
+        Query query = getArguments().getParcelable(KEY_QUERY);
+        Cursor cursor = query.query(getActivity().getContentResolver());
         List<TableRow> userDictionary = new ArrayList<TableRow>(cursor.getCount());
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast()) {

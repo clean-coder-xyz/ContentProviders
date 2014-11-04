@@ -1,9 +1,12 @@
 package contentproviders.learning.cleancoder.com.contentproviders;
 
 import android.os.Bundle;
+import android.provider.UserDictionary.Words;
+import android.support.v4.app.Fragment;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cleancoder.base.android.data.Query;
 import com.cleancoder.base.android.ui.ActivityHelper;
 import com.cleancoder.base.common.data.TableRow;
 
@@ -12,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MainActivityHelper extends ActivityHelper implements UserDictionaryLoaderFragment.Callbacks {
+public class MainActivity extends ActivityHelper implements UserDictionaryLoaderFragment.Callbacks {
 
     private static final MenuItemState DEFAULT_MENU_ITEM_STATE = MenuItemState.ENABLED;
 
@@ -26,14 +29,40 @@ public class MainActivityHelper extends ActivityHelper implements UserDictionary
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         menuItemStates = new HashMap<Integer, MenuItemState>();
-        loadUserDictionary();
+        setMenuItemState(R.id.action_reload, MenuItemState.HIDDEN);
+        if (savedInstanceState == null) {
+            loadUserDictionary();
+        }
     }
 
     private void loadUserDictionary() {
-        setMenuItemState(R.id.action_reload, MenuItemState.HIDDEN);
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, UserDictionaryLoaderFragment.newInstance())
+                .replace(R.id.container, createUserDictionaryDisplayViaCursorLoaderFragment())
                 .commit();
+    }
+
+    private Fragment createUserDictionaryDisplayViaCursorLoaderFragment() {
+        Query query = new Query();
+        query.setUri(Words.CONTENT_URI);
+        query.setProjection(new String[]{
+                Words._ID, Words.WORD, Words.LOCALE, Words.FREQUENCY
+        });
+        query.setSortOrder(Words.WORD);
+        String[] columnsToDisplay = {
+                Words.WORD, Words.LOCALE, Words.FREQUENCY
+        };
+        int[] viewIds = { R.id.word_text_view, R.id.locale_text_view, R.id.frequency_text_view };
+        return UserDictionaryDisplayViaCursorLoaderFragment.newInstance(query, columnsToDisplay, viewIds);
+    }
+
+    private Fragment createUserDictionaryLoaderFragment() {
+        Query query = new Query();
+        query.setUri(Words.CONTENT_URI);
+        query.setProjection(new String[] {
+                Words.WORD, Words.LOCALE, Words.FREQUENCY
+        });
+        query.setSortOrder(Words.WORD);
+        return UserDictionaryLoaderFragment.newInstance(query);
     }
 
     @Override

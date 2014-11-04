@@ -16,7 +16,10 @@ import java.util.List;
  */
 public class UserDictionaryArrayAdapter extends ArrayAdapter<TableRow> {
 
-    private static final int LAYOUT_ID = R.layout.list_item_user_dictionary;
+    static final int LAYOUT_ID = R.layout.list_item_user_dictionary;
+    static final int VIEW_ID_WORD = R.id.word_text_view;
+    static final int VIEW_ID_FREQUENCY = R.id.frequency_text_view;
+    static final int VIEW_ID_LOCALE = R.id.locale_text_view;
 
     private final LayoutInflater layoutInflater;
 
@@ -29,9 +32,9 @@ public class UserDictionaryArrayAdapter extends ArrayAdapter<TableRow> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View itemView = convertView != null ? convertView : layoutInflater.inflate(LAYOUT_ID, null);
         TableRow word = getItem(position);
-        setText(itemView, R.id.word_text_view, word.<String>get(WordAttributes.WORD));
-        setText(itemView, R.id.frequency_text_view, String.valueOf(word.<Integer>get(WordAttributes.FREQUENCY)));
-        setText(itemView, R.id.locale_text_view, word.<String>get(WordAttributes.LOCALE));
+        setText(itemView, VIEW_ID_WORD, word.<String>get(WordAttributes.WORD));
+        setText(itemView, VIEW_ID_FREQUENCY, String.valueOf(word.<Integer>get(WordAttributes.FREQUENCY)));
+        setText(itemView, VIEW_ID_LOCALE, word.<String>get(WordAttributes.LOCALE));
         return itemView;
     }
 
