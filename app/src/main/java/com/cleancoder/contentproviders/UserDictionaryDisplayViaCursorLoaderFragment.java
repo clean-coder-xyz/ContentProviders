@@ -1,4 +1,4 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -13,6 +13,8 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 
 import com.cleancoder.base.android.data.Query;
+
+import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 /**
  * Created by Leonid on 04.11.2014.

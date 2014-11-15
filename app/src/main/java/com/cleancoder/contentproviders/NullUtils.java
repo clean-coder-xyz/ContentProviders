@@ -1,4 +1,4 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 /**
  * Created by Leonid on 29.10.2014.

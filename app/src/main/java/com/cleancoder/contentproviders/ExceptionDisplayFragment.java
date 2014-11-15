@@ -1,4 +1,4 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 /**
  * Created by Leonid on 29.10.2014.

@@ -1,4 +1,4 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.view.MenuItem;
 

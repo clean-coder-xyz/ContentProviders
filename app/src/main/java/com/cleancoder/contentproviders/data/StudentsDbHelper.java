@@ -1,11 +1,11 @@
-package contentproviders.learning.cleancoder.com.contentproviders.data;
+package com.cleancoder.contentproviders.data;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import contentproviders.learning.cleancoder.com.contentproviders.data.StudentsContract.*;
+import com.cleancoder.contentproviders.Student;
 
 
 /**
@@ -23,18 +23,18 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         final String SQL_CREATE_TABLE_STUDENTS =
-                "CREATE TABLE " + StudentsEntry.TABLE_NAME + " (" +
-                        StudentsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        StudentsEntry.COLUMN_NAME + " TEXT NOT NULL, " +
-                        StudentsEntry.COLUMN_AGE + " INTEGER NOT NULL, " +
-                        StudentsEntry.COLUMN_ACADEMIC_YEAR + " INTEGER NOT NULL " +
+                "CREATE TABLE " + StudentsContract.StudentsEntry.TABLE_NAME + " (" +
+                        StudentsContract.StudentsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                        StudentsContract.StudentsEntry.COLUMN_NAME + " TEXT NOT NULL, " +
+                        StudentsContract.StudentsEntry.COLUMN_AGE + " INTEGER NOT NULL, " +
+                        StudentsContract.StudentsEntry.COLUMN_ACADEMIC_YEAR + " INTEGER NOT NULL " +
                 ");";
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_STUDENTS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + StudentsEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + StudentsContract.StudentsEntry.TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
 
@@ -45,9 +45,9 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
     private static final ReaderFromCursor<Student> READER_FROM_CURSOR = new ReaderFromCursor<Student>() {
         @Override
         public Student read(Cursor cursor) {
-            int indexName = cursor.getColumnIndexOrThrow(StudentsEntry.COLUMN_NAME);
-            int indexAge = cursor.getColumnIndexOrThrow(StudentsEntry.COLUMN_AGE);
-            int indexAcademicYear = cursor.getColumnIndexOrThrow(StudentsEntry.COLUMN_ACADEMIC_YEAR);
+            int indexName = cursor.getColumnIndexOrThrow(StudentsContract.StudentsEntry.COLUMN_NAME);
+            int indexAge = cursor.getColumnIndexOrThrow(StudentsContract.StudentsEntry.COLUMN_AGE);
+            int indexAcademicYear = cursor.getColumnIndexOrThrow(StudentsContract.StudentsEntry.COLUMN_ACADEMIC_YEAR);
             return new Student()
                     .withName(cursor.getString(indexName))
                     .withAge(cursor.getInt(indexAge))

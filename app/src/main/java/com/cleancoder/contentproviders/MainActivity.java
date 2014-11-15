@@ -1,4 +1,4 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.os.Bundle;
 import android.provider.UserDictionary.Words;
@@ -13,6 +13,8 @@ import com.cleancoder.base.common.data.TableRow;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 
 public class MainActivity extends ActivityHelper implements UserDictionaryLoaderFragment.Callbacks {

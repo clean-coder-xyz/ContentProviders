@@ -1,9 +1,9 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.content.Intent;
 import android.test.AndroidTestCase;
 
-import contentproviders.learning.cleancoder.com.contentproviders.data.Student;
+import com.cleancoder.contentproviders.Student;
 
 /**
  * Created by Leonid Semyonov (clean-coder-xyz) on 26.10.2014.

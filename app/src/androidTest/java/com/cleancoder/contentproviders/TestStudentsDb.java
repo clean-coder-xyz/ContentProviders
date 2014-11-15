@@ -1,13 +1,12 @@
-package contentproviders.learning.cleancoder.com.contentproviders;
+package com.cleancoder.contentproviders;
 
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 
-import contentproviders.learning.cleancoder.com.contentproviders.data.Student;
-import contentproviders.learning.cleancoder.com.contentproviders.data.StudentsContract.StudentsEntry;
-import contentproviders.learning.cleancoder.com.contentproviders.data.StudentsDbHelper;
+import com.cleancoder.contentproviders.data.StudentsContract.StudentsEntry;
+import com.cleancoder.contentproviders.data.StudentsDbHelper;
 
 /**
  * Created by Leonid Semyonov (clean-coder-xyz) on 26.10.2014.
