@@ -27,7 +27,7 @@ public class StudentsDbHelper extends SQLiteOpenHelper {
                         StudentsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                         StudentsEntry.COLUMN_NAME + " TEXT NOT NULL, " +
                         StudentsEntry.COLUMN_AGE + " INTEGER NOT NULL, " +
-                        StudentsEntry.COLUMN_ACADEMIC_YEAR + " INTEGER NOT NULL" +
+                        StudentsEntry.COLUMN_ACADEMIC_YEAR + " INTEGER NOT NULL " +
                 ");";
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE_STUDENTS);
     }
