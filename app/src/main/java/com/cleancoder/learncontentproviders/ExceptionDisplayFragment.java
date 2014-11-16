@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 /**
  * Created by Leonid on 29.10.2014.

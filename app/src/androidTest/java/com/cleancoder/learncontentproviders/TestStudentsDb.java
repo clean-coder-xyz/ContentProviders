@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 
+import com.cleancoder.learncontentproviders.data.Student;
 import com.cleancoder.learncontentproviders.data.StudentsContract.StudentsEntry;
 import com.cleancoder.learncontentproviders.data.StudentsDbHelper;
 

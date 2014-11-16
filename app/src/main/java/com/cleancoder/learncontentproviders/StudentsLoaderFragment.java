@@ -1,6 +1,7 @@
 package com.cleancoder.learncontentproviders;
 
 import com.cleancoder.base.android.ui.TaskFragment;
+import com.cleancoder.learncontentproviders.data.Student;
 
 import java.util.List;
 

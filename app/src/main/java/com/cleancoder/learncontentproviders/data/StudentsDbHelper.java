@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.cleancoder.learncontentproviders.Student;
-
 
 /**
  * Created by Leonid Semyonov (clean-coder-xyz) on 26.10.2014.

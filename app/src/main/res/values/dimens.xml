@@ -12,4 +12,8 @@
     <dimen name="user_dictionary_padding_left">16dp</dimen>
     <dimen name="user_dictionary_padding_right">16dp</dimen>
     <dimen name="user_dictionary_space_between_word_and_edge_details">8dp</dimen>
+    <dimen name="horizontal_padding_input_student">2dp</dimen>
+    <dimen name="horizontal_padding_button_add_student">4dp</dimen>
+    <dimen name="horizontal_margin_fragment_input_student">8dp</dimen>
+    <dimen name="vertical_margin_fragment_input_student">5dp</dimen>
 </resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:weightSum="9"
+    android:layout_marginLeft="@dimen/horizontal_margin_fragment_input_student"
+    android:layout_marginRight="@dimen/horizontal_margin_fragment_input_student"
+    android:layout_marginTop="@dimen/vertical_margin_fragment_input_student"
+    android:layout_marginBottom="@dimen/vertical_margin_fragment_input_student"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/input_name"
+        android:hint="@string/hint_input_name"
+        android:layout_weight="6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingRight="@dimen/horizontal_padding_input_student" />
+
+    <EditText
+        android:id="@+id/input_age"
+        android:hint="@string/hint_input_age"
+        android:inputType="number"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="@dimen/horizontal_padding_input_student"
+        android:paddingRight="@dimen/horizontal_padding_input_student" />
+
+    <EditText
+        android:id="@+id/input_academic_year"
+        android:hint="@string/hint_input_academic_year"
+        android:inputType="number"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="@dimen/horizontal_padding_input_student"
+        android:paddingRight="@dimen/horizontal_padding_input_student" />
+
+    <Button
+        android:id="@+id/button_add_student"
+        android:text="@string/button_add_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="@dimen/horizontal_padding_button_add_student" />
+
+
+</LinearLayout>

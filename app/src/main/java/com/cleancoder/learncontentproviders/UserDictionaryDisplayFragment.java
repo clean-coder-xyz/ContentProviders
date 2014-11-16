@@ -12,7 +12,6 @@ import com.cleancoder.base.common.data.TableRow;
 import java.io.Serializable;
 import java.util.List;
 
-import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 /**
  * Created by Leonid on 29.10.2014.

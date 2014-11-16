@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import com.cleancoder.base.android.data.Query;
 import com.cleancoder.base.android.ui.ActivityHelper;
 import com.cleancoder.base.common.data.TableRow;
+import com.cleancoder.base.common.util.NullUtils;
 
 import java.util.HashMap;
 import java.util.List;

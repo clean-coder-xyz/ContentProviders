@@ -14,7 +14,6 @@ import android.view.View;
 
 import com.cleancoder.base.android.data.Query;
 
-import contentproviders.learning.cleancoder.com.contentproviders.R;
 
 /**
  * Created by Leonid on 04.11.2014.
