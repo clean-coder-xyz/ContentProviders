@@ -1,4 +1,4 @@
-package com.cleancoder.contentproviders;
+package com.cleancoder.learncontentproviders;
 
 import android.provider.UserDictionary.Words;
 

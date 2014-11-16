@@ -1,4 +1,4 @@
-package com.cleancoder.contentproviders;
+package com.cleancoder.learncontentproviders;
 
 import com.cleancoder.base.android.ui.TaskFragment;
 

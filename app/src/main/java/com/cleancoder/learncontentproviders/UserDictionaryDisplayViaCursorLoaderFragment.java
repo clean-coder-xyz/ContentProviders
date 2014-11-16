@@ -1,4 +1,4 @@
-package com.cleancoder.contentproviders;
+package com.cleancoder.learncontentproviders;
 
 import android.content.ContentValues;
 import android.database.Cursor;

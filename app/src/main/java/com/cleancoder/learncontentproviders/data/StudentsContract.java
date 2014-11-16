@@ -1,4 +1,4 @@
-package com.cleancoder.contentproviders.data;
+package com.cleancoder.learncontentproviders.data;
 
 import android.provider.BaseColumns;
 

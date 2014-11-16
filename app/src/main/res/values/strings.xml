@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="action_reload">Reload</string>
     <string name="user_dictionary_is_empty">User dictionary is empty.</string>
+    <string name="title_activity_students">StudentsActivity</string>
 
 </resources>

@@ -13,7 +13,7 @@ import com.cleancoder.base.R;
  */
 public abstract class TaskFragment extends android.support.v4.app.Fragment {
 
-    private final Object LOCK_IS_TASK_STARTED = "LOCK_IS_TASK_STARTED";
+    private final Object LOCK_IS_TASK_STARTED = new Object();
 
     private boolean isTaskStarted = false;
 
