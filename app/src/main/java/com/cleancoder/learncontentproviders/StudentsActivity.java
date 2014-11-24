@@ -1,36 +1,34 @@
 package com.cleancoder.learncontentproviders;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.ContentValues;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import com.cleancoder.learncontentproviders.R;
+import android.support.v7.app.ActionBarActivity;
 
-public class StudentsActivity extends ActionBarActivity {
+import com.cleancoder.learncontentproviders.content.StudentsContentProvider;
+import com.cleancoder.learncontentproviders.data.Student;
+import com.cleancoder.learncontentproviders.data.StudentsContract.*;
+
+public class StudentsActivity extends ActionBarActivity implements InputStudentsFragment.Callbacks {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.students, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container_input_students, new InputStudentsFragment())
+                    .add(R.id.container_students_display, new StudentsDisplayFragment())
+                    .commit();
         }
-        return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onAddStudent(Student student) {
+        ContentValues row = new ContentValues();
+        row.put(StudentsEntry.COLUMN_NAME, student.getName());
+        row.put(StudentsEntry.COLUMN_AGE, student.getAge());
+        row.put(StudentsEntry.COLUMN_ACADEMIC_YEAR, student.getAcademicYear());
+        getContentResolver().insert(StudentsContentProvider.CONTENT_URI, row);
+    }
+
 }

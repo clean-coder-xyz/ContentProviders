@@ -11,10 +11,11 @@
     <string name="hint_input_age">Age</string>
     <string name="hint_input_name">Name</string>
     <string name="button_add_student">Add</string>
-    <string name="input_student_name_cant_be_empty">Student name can\\'t be empty</string>
+    <string name="input_student_name_cant_be_empty">Student name can\'t be empty</string>
     <string name="invalid_input_student_age">Invalid age</string>
     <string name="negative_input_student_age">Student age can not be negative</string>
     <string name="invalid_input_student_academic_year">Invalid academic year</string>
     <string name="input_student_academic_year_starts_at_first_year">Academic years starts at 1</string>
+    <string name="students_display_no_students">There is no students yet.\nBut you can add students.</string>
 
 </resources>
